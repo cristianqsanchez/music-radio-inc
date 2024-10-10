@@ -26,10 +26,10 @@ namespace Auth.Models
     public required string Address { get; set; }
 
     [StringLength(20, ErrorMessage = "The City must not exceed 20 characters.")]
-    public required string City { get; set; }
+    public string? City { get; set; }
 
     [StringLength(20, ErrorMessage = "The Phone number must not exceed 20 characters.")]
-    public required string Phone { get; set; }
+    public string? Phone { get; set; }
   }
 
 
