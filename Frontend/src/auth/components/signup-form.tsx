@@ -51,7 +51,7 @@ export function SignUpForm() {
                 <div className='grid grid-cols-2 gap-4 [&>div>label]:float-left'>
                   <div className='space-y-2'>
                     <label htmlFor='id'>ID Number</label>
-                    <Input name='id' placeholder='9473143' required />
+                    <Input name='id' min={4} max={15} placeholder='9473143' required />
                   </div>
 
                   <div className='space-y-2'>
@@ -59,6 +59,8 @@ export function SignUpForm() {
                     <Input
                       id='username'
                       name='username'
+                      min={3}
+                      max={50}
                       placeholder='John Doe'
                       required
                     />
@@ -70,6 +72,7 @@ export function SignUpForm() {
                   <Input
                     id='email'
                     name='email'
+                    max={50}
                     type='email'
                     placeholder='johndoe@example.com'
                     required
@@ -81,6 +84,7 @@ export function SignUpForm() {
                   <Input
                     id='passowrd'
                     name='password'
+                    max={20}
                     type='password'
                     placeholder='**********'
                     required
@@ -92,6 +96,7 @@ export function SignUpForm() {
                   <Input
                     id='address'
                     name='address'
+                    max={300}
                     placeholder='Cra 80 - 45A'
                     required
                   />
@@ -103,8 +108,8 @@ export function SignUpForm() {
                     <Input
                       id='city'
                       name='city'
+                      max={20}
                       placeholder='Medellín'
-                      required
                     />
                   </div>
 
@@ -113,9 +118,9 @@ export function SignUpForm() {
                     <Input
                       id='phone'
                       name='phone'
+                      max={20}
                       type='tel'
                       placeholder='3025672149'
-                      required
                     />
                   </div>
                 </div>
